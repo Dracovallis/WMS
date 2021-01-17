@@ -43,6 +43,8 @@ class Bootstrap
                 require_once '../app/vendor/autoload.php';
             }
 
+            ini_set('xdebug.max_nesting_level', 512);
+
         });
     }
 

@@ -65,7 +65,7 @@ class WarehouseController extends ControllerBase
             }
 
             if (!empty($packedProducts)) {
-                ini_set('xdebug.max_nesting_level', 512);
+      
                 // the function does not allow to pass height so we swap it with width
                 $laff->pack($boxes, ['width' => $warehouseHeightMeters, 'length' => $maxDimension]);
                 $warehouseDimensions = $laff->get_container_dimensions();

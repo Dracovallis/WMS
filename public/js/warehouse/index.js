@@ -16,11 +16,37 @@ $(document).ready(() => {
           },
           2000
         );
-
-        $("#cube").trigger('mouseenter');
       }
 
       WarehouseIndex.handleSliderInputs();
+      WarehouseIndex.handleCuberRotation();
+    },
+    handleCuberRotation: function () {
+      $("#cube").css(
+        "transform",
+        "translateZ(-150px) rotateX(330deg) rotateY(230deg)"
+      );
+
+      setTimeout(() => {
+        $("#cube").css(
+          "transform",
+          "rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(-150px)"
+        );
+      }, 5000);
+
+      $("#cube").hover(() => {
+        $("#cube").css(
+          "transform",
+          "translateZ(-150px) rotateX(330deg) rotateY(230deg)"
+        );
+      });
+
+      $("#cube").mouseleave(() => {
+        $("#cube").css(
+          "transform",
+          "rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(-150px)"
+        );
+      });
     },
     handleSliderInputs: function () {
       let sliders = $('input[type="range"]');
