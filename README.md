@@ -22,7 +22,7 @@ If you do not have composer installed, you can do so by running:
 
 NPM is required to run this app.
 
-Inside the project app directory, simply run:
+Inside the project public directory, simply run:
 
 `npm install`
 
